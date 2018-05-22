@@ -1,0 +1,116 @@
+Introduction
+
+Based on the given assignment, where some coding is also asked, I just specify the QA Engineer specific role setting the Test Strategy proposed and tests cases, as I do not have enough knowledge for the used technical language programming.
+
+Test Strategy
+The approach used defines the required checks to verify the systems and applications concerned are up and running:
+1. System Availability
+2. Application is accessible
+3. Prepare tests cases according to User Stories specifications
+4. Prepare Test data
+5. Regression tests after each delivery.
+
+Test Cases
+For this application 7 test cases are required based on 7 User Stories.
+Completed User Stories:
+	US01 Display the current date
+	US02 View the list of pets
+	US03 - Be able to add a new pet
+	US04 - Be able to modify an existing pet
+	US05 - Exposing a REST API
+In progress:
+	US06 Delete a single pet
+In the backlog:
+	US07 Delete multiple pets
+
+Test Cases Definition
+1. US01 Display the current date
+	1.1 Description
+Check the current date is correctly displayed
+	1.2 Steps
+ID	ACTIONS	EXPECTED RESULTS	RESULT
+			PASS	FAIL
+1	Access the webapp from a Web browser:	The app responds page is correctly displayed	0	0
+2	Current date is displayed on the top right part of the screen	Current date field is displayed and at the right place on the screen	0	0
+3	Current date format is correct [ DD-MM-YYYY ]	Current date format is correct	0	0
+4	Check the Background colour of the banner	Background colour is correct	0	0
+	1.3 Expected Result
+All the required information is displayed on the screen form.
+	1.4 Report Error
+Report here the Error if any:
+-	
+
+2. US02 View the list of pets
+	2.1 Description
+Check the list of pet is displayed
+	2.2 Steps
+ID	ACTIONS	EXPECTED RESULTS	RESULT
+			PASS	FAIL
+1	Access the webapp from a Web browser:	The app responds page is correctly displayed	0	0
+2	The List of Pets is displayed on the screen as a table	The List of Pets table is displayed	0	0
+3	The List of Pets table shows Pets Name and Status	Pets Name and Status are displayed	0	0
+4	Check List of Pets when list is over 100 elements 	The List of Pets table is displayed in less than 2 seconds	0	0
+	1.3 Expected Result
+All the required information is displayed on the screen form.
+Verification of on-screen data should be done with data in DB.
+	1.4 Report Error
+Report here the Error if any:
+-	
+
+3. US03 Be able to add a new pet
+	3.1 Description
+New pets can be added in the application
+	3.2 Steps
+ID	ACTIONS	EXPECTED RESULTS	RESULT
+			PASS	FAIL
+1	Access the webapp from a Web browser:	The app responds page is correctly displayed	0	0
+2	The page displays 3 elements:	Pet Name	Pet Status	Create Button	All 3 elements are displayed	0	0
+3	Focus on field Pet Nameuse the TAB key:accessibility sequence must be:	1 Pet Name	2 Pet Status	3 Create Button	The accessibility sequence is respected	0	0
+4	Focus on field Pet Statususe the SHIFT + TAB key:accessibility sequence must be:	1 Pet Status	2 Pet Name	3 Create Button	The accessibility sequence is respected	0	0
+5		Pet Name:	not populatedand/or	Pet Status:	not populatedpress the Create button if one or both fields are empty	A warning/error message displayedNo action DONE	0	0
+6		Pet Name:	populatedand	Pet Status:	populatedpress the Create button	A new pet is added	0	0
+7		Pet Name:	populatedand	Pet Status:	populatedpress the ENTER KEY	A new pet is added	0	0
+	3.3 Expected Result
+All the required information is displayed on the screen form.
+Verification that data is correctly written in DB.
+	3.4 Report Error
+Report here the Error if any:
+-	
+4. US04 - Be able to modify an existing pet
+	4.1 Description
+Name and Status of pets can be updated
+	4.2 Steps
+ID	ACTIONS	EXPECTED RESULTS	RESULT
+			PASS	FAIL
+1	Access the webapp from a Web browser:	The app responds page is correctly displayed	0	0
+2	The List of Pets is displayed on the screen as a table	The List of Pets table is displayed	0	0
+3	Focus on field Pet Name	Pet Name field editable	0	0
+4	Focus on field Pet Status	Pet Status field editable	0	0
+5	Focus on field Pet Name and/or Pet Status	Focus is on the chosen field(s)	0	0
+6	Modify the value of the fields Pet Name and/or Pet Status	Data is amended	0	0
+7	Press the ESC KEY	Changes are discarded and previous values are displayed back	0	0
+8	Repeat steps until step 6:Press ENTER KEY	Changed values are saved	0	0
+9	Repeat steps until step 6:Click outside the editing zone	Changed values are saved	0	0
+	4.3 Expected Result
+All the required information is displayed on the screen form.
+Verification that data is correctly written in DB.
+	4.4 Report Error
+Report here the Error if any:
+-	
+
+5. US05 - Exposing a REST API
+	5.1 Description
+Main functionalities of the application are correctly working
+	5.2 Steps
+ID	ACTIONS	EXPECTED RESULTS	RESULT
+			PASS	FAIL
+1	Access the webapp from a Web browser:	The app responds page is correctly displayed	0	0
+2	Deliverables are correctly installed	Check done with developers	0	0
+	Execute Test cases US01 to US04 (if available)			
+4	Methods are functional and returned data is valid	Methods return valid data	0	0
+	5.3 Expected Result
+All the required information is displayed on the screen form.
+Verification that data is correctly written in DB.
+	5.4 Report Error
+Report here the Error if any:
+-	
